@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Chance</title>
+	<script type="text/javascript">
+		var numQ = wallet - 1;
+		var game = numQ;
+		var lottery = 150;
+		var wallet = 10;
+
+		function gamer(numQ) {
+			var random = Math.trunc(Math.random()*100);
+			var winner = Math.trunc(Math.random()*100);
+			var luckyN = 42;
+
+				if (random == winner) {
+					return ("You did it! You won the lottery! Here's 100 coins. " + (wallet += lottery) + ' : ' + random);
+
+				} else if (wallet < 1) {
+					wallet += 2;
+					return ("MOM! I need another coin!");
+
+				} else if (numQ < 1){
+					return ("Sorry, you need coins to play with me.");
+
+				} else if (wallet >= 200) {
+					wallet = wallet - 10;
+					return ("Well your wallet is too fat.." + wallet);
+
+				} else if (random == luckyN || random == 7 || random == 3 || random == 14 || random == 13 || random == 8 || random == 69) {
+					return ("Damn, son. You hit the lucky number. I'll go ahead an add 70 coins to your wallet. " + (wallet += 70) + ' : ' + random);
+				} 
+				wallet = wallet - numQ;
+				return (wallet + " : " + random);
+		
+		} 
+/*var numQ = 1;
+		var game = numQ;
+		var lottery = 150;
+
+		function gamer(numQ) {
+			var random = Math.trunc(Math.random());
+			var winner = Math.trunc(Math.random());
+			var luckyN = 42;
+
+			if (random == winner) {
+				return ("You did it! You won the lottery! Here's 100 coins");
+				numQ += lottery;
+
+			} else if (numQ < 1){
+				return ("Sorry, you need coins to play with me.");
+
+			} else if (random == luckyN || random == 20 || random == 91) {
+				return ("Damn, son. You hit the lucky number. I'll go ahead an add 70 coins to your wallet");
+				numQ += 70;
+
+			} 
+				return (random);
+		
+		}*/
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
